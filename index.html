@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <meta name="description" content="Edu-Assist helps students plan, study, and keep their academic work organised.">
+  <title>Edu-Assist — Your study space</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="src/features.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script src="src/app.js" type="module"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="Edu-Assist home"><span class="brand-mark">e<span>✳</span></span><span>Edu-Assist</span></a>
+      <div class="workspace-label">YOUR WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span>Overview</button>
+        <button class="nav-item" data-view="map"><span class="nav-icon">⌘</span>Learning map</button>
+        <button class="nav-item" data-view="modules"><span class="nav-icon">▦</span>Modules &amp; exams</button>
+        <button class="nav-item" data-view="practice"><span class="nav-icon">✎</span>Past-paper practice</button>
+        <button class="nav-item" data-view="documents"><span class="nav-icon">▤</span>My documents<span class="nav-count" id="doc-count">0</span></button>
+        <button class="nav-item" data-view="planner"><span class="nav-icon">▦</span>Study planner</button>
+        <button class="nav-item" data-view="quizzes"><span class="nav-icon">◇</span>Practice quizzes</button>
+        <button class="nav-item" data-view="assistant"><span class="nav-icon">✳</span>Study chat</button>
+        <button class="nav-item" data-view="stream"><span class="nav-icon">◷</span>Study stream</button>
+        <button class="nav-item" data-view="groups"><span class="nav-icon">♧</span>Study groups</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="tip-card"><span class="tip-spark">✳</span><strong>Small steps add up.</strong><p>A focused 25-minute session can make all the difference.</p><button data-view="planner" class="text-link">Plan a session <span>→</span></button></div>
+        <button class="profile-button" id="profile-button"><span class="avatar" id="profile-avatar">LL</span><span class="profile-copy"><strong id="profile-name">Guest mode</strong><small id="profile-status">Local student data</small></span><span class="more">···</span></button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="mobile-menu" aria-label="Open menu">☰</button><div class="breadcrumb">My workspace <span>/</span> <b id="breadcrumb-current">Overview</b></div><div class="top-actions"><span class="today-label" id="today-label"></span><button class="icon-button" id="top-low-data" title="Toggle low-data mode" aria-label="Toggle low-data mode">◉</button><button class="icon-button" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">◐</button><button class="help-button" id="auth-button">Log in</button><button class="help-button" id="help-button">? <span>Help</span></button></div></header>
+      <div class="page-content" id="page-content"></div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="modal" id="modal"><div class="modal-inner"><button class="modal-close" id="modal-close" aria-label="Close">×</button><div id="modal-content"></div></div></dialog>
+</body>
+</html>

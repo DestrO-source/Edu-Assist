@@ -1,0 +1,9 @@
+{
+  "name": "Edu-Assist — Student Study Space",
+  "short_name": "Edu-Assist",
+  "description": "A lightweight study planner, paper practice and learning map.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#f6f7fb"
+}
